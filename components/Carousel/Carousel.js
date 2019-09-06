@@ -52,9 +52,31 @@ const createCarousel = () => {
 }
 
 carouselContainer.append(createCarousel()); 
-
 const images = document.querySelectorAll('.carousel-container img');
+const rightButton1 = document.querySelector('.carousel-container .right-button'); 
+const leftButton1 = document.querySelector('.carousel-container .left-button'); 
+let index = 0; 
+
+const display_img = (i) => {
+  images[i].style.display = "inline"; 
+}
+
+const hide_img = (i) => {
+  images[i].style.display = "none"; 
+}
+
+display_img(index);
 
 
-const currentIndex = 0; 
-images[currentIndex].style.display = "inline"; 
+rightButton1.addEventListener('click', () =>{
+  index++; 
+  display_img(index); 
+  hide_img(index - 1); 
+}); 
+
+leftButton1.addEventListener('click', () => {
+  index--; 
+  display_img(index); 
+  hide_img(index + 1); 
+}); 
+
