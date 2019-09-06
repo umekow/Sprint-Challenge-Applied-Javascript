@@ -24,4 +24,5 @@ function Header() {
     //append elements 
     header_div.append(date_span, h1, temp_span); 
 
+    return header_div; 
 }
