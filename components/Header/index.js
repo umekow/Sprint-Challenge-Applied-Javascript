@@ -27,6 +27,11 @@ function createHeader() {
 
     //append elements 
     header_div.append(date_span, h1, temp_span); 
+    
+    //content
+    date_span.textContent = "SMARCH 28, 2019"; 
+    h1.textContent = "Lambda Times";
+    temp_span.textContent = "98°"; 
 
     return header_div; 
 }

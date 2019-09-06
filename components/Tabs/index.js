@@ -29,6 +29,9 @@ const createTab = topic => {
 //get an array of topics from a link then create a new tab
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics').then(response => {
+    //log to console
+    console.log(response); 
+    
     //an array of topics from site
     const topics = response.data.topics; 
     //iterate through the array, creating a tab for each and then appending it to DOM
@@ -36,5 +39,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics').then(response => 
         //create tab for each item then append that tab to div on dom
         tabs_div.append(createTab(item));
     }); 
+
+
 });
 

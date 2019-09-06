@@ -57,6 +57,8 @@ const createCard = data => {
 
 //get information from link
 axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response => {
+    //log to console
+    console.log(response); 
     //stored article object in a variable
     const articles = response.data.articles; 
 
@@ -65,7 +67,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response =
 
     //iterate through array created from line of code above
     article_array.forEach(item => {
-        
+
         //get array of articles that is stored at the index of 1 then iterate through it to get values to create cards
         item[1].forEach(i => {
             cardContainer.appendChild(createCard(i)); 
