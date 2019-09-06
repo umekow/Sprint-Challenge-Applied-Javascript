@@ -33,7 +33,7 @@ const createCard = data => {
     card.classList.add('card'); 
     headline.classList.add('headline'); 
     author.classList.add('author'); 
-    imgContainer.classList.add('imgContainer'); 
+    imgContainer.classList.add('img-container'); 
 
 
     //append elements to build card
