@@ -38,9 +38,23 @@ const createCarousel = () => {
   leftButton.classList.add('left-button'); 
   rightButton.classList.add('right-button'); 
 
+  //src
+  img1.src="./assets/carousel/mountains.jpeg" ; 
+  img2.src="./assets/carousel/computer.jpeg" ; 
+  img3.src="./assets/carousel/trees.jpeg" ;
+  img4.src="./assets/carousel/turntable.jpeg" ; 
+
   //append
   carousel_div.append(leftButton, img1, img2, img3, img4, rightButton); 
-
+  
   //return div
   return carousel_div; 
 }
+
+carouselContainer.append(createCarousel()); 
+
+const images = document.querySelectorAll('.carousel-container img');
+
+
+const currentIndex = 0; 
+images[currentIndex].style.display = "inline"; 
